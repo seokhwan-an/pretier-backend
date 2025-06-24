@@ -1,3 +1,9 @@
 spring:
   application:
     name = pretier
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3333/pretier
+    username: root
+    password: mysql

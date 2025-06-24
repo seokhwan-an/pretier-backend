@@ -1,0 +1,15 @@
+version: '3'
+services:
+  database:
+    container_name: pretier-db-container
+    image: mysql:8.0.33
+    environment:
+      MYSQL_DATABASE: pretier
+      MYSQL_ROOT_PASSWORD: mysql
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3333/MYSQL_DATABASE?useSSL=false&serverTimezone=Asia/Seoul&characterEncoding=UTF-8&allowPublicKeyRetrieval=true
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: mysql
+    ports:
+      - "3333:3306"
+    volumes:
+      - .:/database
